@@ -1,0 +1,22 @@
+#!/bin/bash
+
+URL="http://dlib.net/files/mmod_human_face_detector.dat.bz2"
+URL_landmark="http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2"
+directory_name="model"
+
+echo $(date) 'Creating folder model'
+if [ -d $directory_name ]
+then
+    echo "Directory already exists, we download dlib CNN model here"
+else
+    mkdir $directory_name
+fi
+
+echo $(date) 'Starting download...'
+wget -O "$directory_name/face_detector.dat.bz2" "${URL}"
+echo $(date) 'Unzip file...'
+bzip2 -d "$directory_name/face_detector.dat.bz2"
+echo $(date) 'Starting download...'
+wget -O "$directory_name/landmark_predictor.dat.bz2" "${URL_landmark}"
+echo $(date) 'Unzip file...'
+bzip2 -d "$directory_name/landmark_predictor.dat.bz2"
