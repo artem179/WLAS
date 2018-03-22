@@ -103,7 +103,7 @@ def detect_on_video(video, upsample_time=1, det_threshold=0.5, inter_threshold=0
     persons = []
     cur_id = 0
     while(cap.isOpened()):
-        progress(frame_id, length, "Extracting mouthes ...")
+        progress(frame_id, length, "Extracting mouthes")
         ret, frame = cap.read()
         if(ret):
             if frame_id % step == 0:
