@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+../scripts/gridcorpus/*
+.gitignore
+/notebooks/.gitignore
+notebooks/.gitignore
+

@@ -1,3 +1,9 @@
 faces/*
 model/*
 *.mp4
+scripts/gridcorpus/
+*.sh
+scripts/*.sh
+scripts/script.sh
+notebooks/.gitignore
+
